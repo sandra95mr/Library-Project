@@ -1,0 +1,29 @@
+
+<html>
+
+<body>
+
+<section>
+
+<div class="image-overlay" style="visibility: hidden;">
+  <img [src]="imageSrc">
+</div>
+  
+  <div class="overlay">
+    <div class="snapcam-container">
+      <video #videoElement id="videoElement" autoplay></video>
+      <canvas #canvasElement id="canvasElement"></canvas>
+      <div class="button-container">
+        <button class="btn btn-primary" (click)="takePicture()" #boton1>Capturar</button>
+        <button class="btn btn-primary" (click)="downloadImage()" #boton2 style="visibility: hidden;">Descargar</button>
+        
+      </div>
+    </div>
+  </div>
+
+</section>
+
+</body>
+
+</html>
+  

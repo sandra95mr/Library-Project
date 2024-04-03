@@ -1,0 +1,32 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<header>
+
+<div class="imagenes">
+
+    <div class="logo">
+      <img src="./assets/imagenes/Sandra.png" alt="logo" routerLink="" style="cursor:pointer">
+    </div>                                        
+    <form class="form-search content-search navbar-form" action="" method="post">   <!--ngModel enlace entre algo que tienes en el ts y un campo de formulario del template (vista) del html.-->
+      <div class="input-group">                                                     <!--wordSearch la palabra por la que vas a buscar y llamas al evento search mientras escribes-->
+          <input placeholder="Buscar" #busca class="form-control form-text" [(ngModel)]="wordSearch" (keyup)="search($event)" type="text" size="15" maxlength="128" [ngModelOptions]={standalone:true}/>  <!--keyup al soltar la tecla. El standalone porque daba error del core-->
+          <span class="input-group-btn" #boto1>                                                                                                          <!--El ngModelOptions omite el valor en el formulario. Si el input pertenece a un formulario, como es el caso, este dejaría de incluir el input que le hemos marcado-->
+              <button type="submit" class="btn btn-primary"><span class="icon glyphicon glyphicon-search" aria-hidden="true"></span></button>
+          </span>
+      </div>
+  </form>
+
+   <ul class="nav navbar-nav navbar-right">
+        <li #perfil style="visibility: hidden;"><a *ngIf="linkValue" [routerLink]="linkValue"><span [class]="iconClass"></span><strong>{{ texto }}</strong></a></li>
+        <li #deslog style="visibility: hidden;" (click)="logout()"><a><span class="glyphicon glyphicon-log-in"></span> <strong> LOGOUT </strong> </a></li>
+        <li #regis><a routerLink="/sign"><span class="glyphicon glyphicon-user"></span> <strong> SIGN UP </strong> </a></li>
+        <li #log><a routerLink="/login"><span class="glyphicon glyphicon-log-in"></span> <strong> SIGN IN </strong> </a></li>
+    </ul>
+
+  <span class="input-group-btn2" #boto2>
+    <button routerLink="/cart" class="boton2">
+    <i class="material-icons"> add_shopping_cart </i> {{totalProducts}}
+   </button>
+</span>
+
+

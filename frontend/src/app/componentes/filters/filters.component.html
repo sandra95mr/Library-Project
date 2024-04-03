@@ -1,0 +1,46 @@
+<html>
+
+<body>
+
+    <h3>Filtros:</h3>
+
+    <aside class="izquierda">
+        <form action="#" class="formu">
+            <p>
+              <label>
+                <input name="group1" type="radio" value="primero" (change)="onRadioChange($event)"/>
+                <span>Menos de 100 páginas</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="group1" type="radio" value="segundo" (change)="onRadioChange($event)"/>
+                <span>Entre 100 y 150 páginas</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input name="group1" type="radio" value="tercero" (change)="onRadioChange($event)"/>
+                <span>Entre 150 y 200 páginas</span>
+              </label>
+            </p>
+            <p style="margin-bottom: 70px;">
+                <label>
+                  <input name="group1" type="radio" value="cuarto" (change)="onRadioChange($event)"/>
+                  <span>Más de 200 páginas</span>
+                </label>
+              </p>
+
+              <p class="range-field">
+                <label>                                         <!--el (input) dispara el metodo de enviar precio, cada vez que se toca la barra de rango-->
+                  <input type="range" id="price-range" min="0" max="50" name="priceRange" [(ngModel)]="selectedPrice" (input)="onRangePriceChange()">
+                  <span class="eti">{{selectedPrice}}</span>
+                </label>
+              </p>
+              
+          </form>
+    </aside>
+
+</body>
+
+</html>

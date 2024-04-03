@@ -1,0 +1,62 @@
+.col-md-4{
+
+    margin-top: 46px;
+}
+
+input:hover::placeholder {
+    color: hsla(316, 83%, 57%, 0.61);
+  }
+
+h2{
+
+    color: hsla(276, 97%, 38%, 0.63);
+}
+
+
+.col-md-8{
+
+    margin-top: 50px;
+}
+
+th{
+
+    padding: 10px;
+    font-weight: bold;
+    border: 3px solid hsla(276, 97%, 38%, 0.63);
+    text-align: center;
+}
+
+thead:hover{
+
+    background-color: hsla(276, 97%, 38%, 0.63);
+}
+
+td{
+
+    border: 3px solid hsla(316, 83%, 57%, 0.61);
+    font-weight: bold;
+}
+
+tr:hover {
+    background-color: hsla(316, 83%, 57%, 0.61); /* color de fondo */
+}
+
+tr:nth-child(odd):hover {
+    background-color: hsla(316, 83%, 57%, 0.61); /* color de fondo */
+}
+
+
+.derec{
+
+    padding-left: 40%;
+}
+
+.izqui{
+    padding-left: 5%;
+}
+
+.hidden-cell {
+    display: none;
+}
+
+

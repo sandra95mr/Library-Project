@@ -1,0 +1,249 @@
+html {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  background: #03001e;
+  background: -webkit-linear-gradient(to right, hsla(319, 80%, 96%, 0.623), hsla(316, 83%, 57%, 0.61), hsla(276, 97%, 38%, 0.63), hsla(246, 100%, 6%, 0.623)) ;
+  background: linear-gradient(to right, hsla(319, 80%, 96%, 0.623), hsla(316, 83%, 57%, 0.61), hsla(276, 97%, 38%, 0.63), hsla(246, 100%, 6%, 0.623));
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  margin-top: 24px;
+
+
+}
+
+img {
+
+width: 350px;
+height: 380px;
+opacity: 45%;
+
+}
+
+
+h2 {
+margin-left: 15%;
+color: hsla(246, 100%, 6%, 0.623);
+}
+
+.card {
+
+margin-left: 38%;
+width: 350px;
+
+}
+
+
+
+@media (min-width: 700px) {
+.h-custom {
+height: 100vh !important;
+}
+}
+
+
+form {
+  background-color: white;
+  box-shadow: 0 0 6px 0 rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  padding-right: 6.0%;
+  padding-left: 5%;
+  margin-bottom: 10%;
+ 
+  
+}
+
+.formulario {
+  width: 100%;
+  margin:auto;
+}
+
+form .preguntas {
+  position: relative;
+  margin: 45px;
+}
+
+
+a {
+color: rgb(122, 8, 122);
+display:inline-block;
+text-decoration: none;
+font-weight: 400;
+}
+
+/* STRUCTURE */
+
+.wrapper {
+display: flex;
+align-items: center;
+flex-direction: column; 
+justify-content: center;
+width: 100%;
+min-height: 100%;
+padding: 20px;
+}
+
+#formContent {
+-webkit-border-radius: 10px 10px 10px 10px;
+border-radius: 10px 10px 10px 10px;
+background: #fff;
+padding: 30px;
+width: 90%;
+max-width: 450px;
+position: relative;
+padding: 0px;
+-webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+text-align: center;
+}
+
+#formFooter {
+background-color: #f6f6f6;
+border-top: 1px solid #dce8f1;
+padding: 15px;
+text-align: center;
+-webkit-border-radius: 0 0 10px 10px;
+border-radius: 0 0 10px 10px;
+font-size: 13px;
+}
+
+form .preguntas {
+
+  text-align: left;
+
+}
+
+
+input {
+  background: none;
+  font-size: 18px;
+  color: #c6c6c6;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 100%;
+  border: none;
+  border-bottom:  1px solid rgb(141, 26, 141);
+
+  
+}
+
+input:focus {
+  outline: none;
+  color: rgb(65, 9, 65);
+}
+
+
+.bor{
+
+  padding-bottom: 0%;
+  padding-top: 0%;
+
+
+}
+.bor:hover {
+  outline: none;
+  color: rgb(65, 9, 65);
+ 
+}
+
+
+
+
+
+label {
+  color: rgb(141, 26, 141);
+  font-size: 16px;
+  position: absolute;
+  left: 5px;
+  top: 10px;
+  transition: 0.5s ease-in-out all;
+  pointer-events: none;
+
+}
+
+button {
+
+  border:none;
+  display:inline-block;
+  width: 38%;
+  margin-left: 20px;
+  height: 40px;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 400ms ease-out;
+  border-radius: 20px;
+  color: rgb(122, 8, 122);
+  
+}
+
+input:focus~label, input:valid~label {
+
+  top:-22px;
+  font-size: 19px;
+  color: rgb(122, 8, 122); 
+
+}
+
+.card {
+  -webkit-animation-name: card;
+  animation-name: card;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@-webkit-keyframes card {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@keyframes card {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+/* Simple CSS3 Fade-in Animation */
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.card {
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:1s;
+}
+
+

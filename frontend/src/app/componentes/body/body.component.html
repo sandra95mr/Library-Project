@@ -1,0 +1,28 @@
+<html>
+
+<body>
+
+
+    <app-aside-left class="izquierda" (propagar)="procesoPropagar($event)" (propagar2)="procesoPropagar2($event)">
+
+
+    </app-aside-left>
+
+    <section>
+
+        <app-book *ngFor="let libro of filterGenre" [titulo]="libro.titulo" [precio]="libro.precio" [ruta]="libro.ruta" (addToCartClicked)="addProduct(libro)"></app-book>
+
+                                                                                    <!--Si en vez de la variable wordKey le pongo una palabra, ya filtra-->
+                                                                                    <!-- poner a escuchar el evento addToCartClicked del componente hijo y llamar al método addProduct con el objeto product emitido (el libro):-->
+
+  </section>
+
+
+   <app-aside-right class="derecha">
+
+
+   </app-aside-right>
+
+    </body>
+
+    </html>

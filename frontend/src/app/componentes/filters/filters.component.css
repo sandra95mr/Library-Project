@@ -1,0 +1,33 @@
+.formu{
+
+    margin-top: 40px;
+    margin-left: 25px;
+    
+   
+}
+
+h3{
+
+    margin-left: 60px;
+    color: hsla(316, 83%, 57%, 0.61);
+    
+}
+
+.eti{
+
+    margin-left: 65px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+    Color:rgb(62, 17, 99)
+
+}
+
+.range-field{
+
+    margin-left: 13px;
+}
+
+span{
+
+    Color:rgb(62, 17, 99)
+}

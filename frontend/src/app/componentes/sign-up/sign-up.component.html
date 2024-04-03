@@ -1,0 +1,58 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<html>
+
+  <div class="card rounded-3">
+    <img src="../../../../assets/imagenes/yo.jpg" #foto
+      class="w-100"
+      alt="Sample photo">
+
+      <form action="" method="POST" id="form" #userForm="ngForm"> <!-- forma para decirle a angular que voy a seleccionar todo el contenido para guardarlo en una especie de variable # -->
+        <!-- cuando enviemos el formulario vamos a querer manejarlo con esa funcion que le pasamos, que va a recibir como paramentro todo el formulario-->
+       
+        <div class="formulario">
+            <h2 #titulo> NUEVA CUENTA </h2>
+
+            <div class="preguntas">
+            <input type="hidden" class="form-control" name="_id" #_id="ngModel" [(ngModel)]="userService.selectedUser._id">  
+                                                               
+           </div>
+
+         <div class="preguntas">
+             <input type="text" class="form-control" name="nombre" #name="ngModel" #no [(ngModel)]="userService.selectedUser.nombre" id="nombre"  pattern= "^[A-Z a-z]{1,20}$" required/>
+             <i class=""></i>
+             <label for="">Nombre </label>
+         </div>
+    
+         <div class="preguntas">
+             <input type="text" class="form-control" name="ciudad" #name="ngModel" #ci [(ngModel)]="userService.selectedUser.ciudad" id="ciudad"  required/>
+             <i class=""></i>
+             <label for="">Ciudad </label>
+         </div>
+         <div class="preguntas">
+             <input type="email" class="form-control" name="email" #name="ngModel" #em [(ngModel)]="userService.selectedUser.email" id="email" required/>
+             <i class=""></i>
+             <label for=""> Correo Electrónico </label>
+         </div>
+         <div class="preguntas">
+             <input type="password" class="form-control" name="contrasenia" #name="ngModel" #co [(ngModel)]="userService.selectedUser.contrasenia" id="contrasenia" minlength="10" required/>
+             <i class=""></i>
+             <label for=""> Contraseña </label>
+         </div>
+
+         <div class="d-flex justify-content-end pt-3">
+            <button #boton1 type="submit" class="fadeIn fourth" value="Log In" (click)="addUser(userForm)"> Enviar </button>
+            <button type="submit" class="fadeIn fourth" value="Log In" (click)="vaciar(userForm)"> Vaciar </button>
+          </div>
+
+          <div class="text-center" style="margin-top: 20px; padding-bottom: 0%; font-size: small; visibility: hidden;" #eli>
+
+            <input tabindex="5" class="bor" type="button" value="Eliminar cuenta" class="forgot-password" (click)="deleteUser()" style="font-size: small; color: rgb(141, 26, 141);">
+
+          </div>
+        </div>
+     </form>
+
+    </div>
+
+</html>

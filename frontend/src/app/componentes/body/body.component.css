@@ -1,0 +1,39 @@
+
+
+.izquierda h4{
+
+    Color:rgb(62, 17, 99)
+
+}
+
+.derecha {
+    margin-top: 40px;
+    width: 21%;
+    border-radius: 10px;
+    float: right;
+ 
+}
+
+.izquierda {
+    margin-top: 40px;
+    width: 14%;
+    height: 70%;
+    border-radius: 10px;
+    float: left;
+   
+}
+
+section {
+    margin-top: 40px;
+    width: 65%;
+    height: 50%;
+    border-radius: 10px;
+    float: left;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+}
+
+
+
+

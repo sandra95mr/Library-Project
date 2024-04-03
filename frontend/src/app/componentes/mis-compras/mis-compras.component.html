@@ -1,0 +1,26 @@
+<ng-container *ngIf="transactions.length!=0">
+  <div *ngFor="let transaction of transactions" class="card" style="margin-left: 15px;">
+    <div class="card-header">
+      <p class="card-title">ID TRANSACCIÓN {{ transaction._id }}</p>
+      <p class="card-subtitle">IMPORTE {{ transaction.total }} €</p>
+    </div>
+    <ul class="card-body">
+      <li *ngFor="let product of transaction.products; let i = index" class="product-container">
+        <div class="product-details">
+          <p>TÍTULO: {{ product.producto.titulo}}</p>
+          <p>GÉNERO: {{ product.producto.genero}}</p>
+          <p>PRECIO UNIDAD: {{ product.producto.precio}} €</p>
+          <p>CANTIDAD: {{ product.cantidad}}</p>
+          <p>PRECIO TOTAL: {{ product.precioTo}} €</p>
+        </div>
+          <hr *ngIf="transaction.products.length>1 && i < transaction.products.length - 1">
+      </li>
+    </ul>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="transactions.length==0">
+  <p style="margin-top: 30px; margin-left: 40px; font-weight: bold;
+  font-size: 1.5rem;
+  color: hsla(246, 100%, 6%, 0.623);">No has realizado ninguna compra</p>
+</ng-container>

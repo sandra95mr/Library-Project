@@ -1,0 +1,49 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<!DOCTYPE html>
+<html lang="en">
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+
+        <img src="./assets/imagenes/Sandra2.png" alt="logo">
+    
+    </div>
+
+    <!-- Login Form -->
+    <form action="" method="POST" id="form" #userForm="ngForm">
+
+        <div class="formulario">
+
+        <div class="preguntas">
+            
+        <input type="email" id="email" name="email" class="form-control" #name="ngModel" [(ngModel)]="userService.selectedUser.email" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required/>
+        <i class=""></i>
+        <label for="">Correo Electrónico</label>
+
+        </div>
+
+        <div class="preguntas">
+
+         <input [type]="'password'" id="contrasenia" minlength="10" name="contrasenia" #name="ngModel" [(ngModel)]="userService.selectedUser.contrasenia" required/>
+         <i class=""></i>
+         <label for="" style="text-align: left;"> Contraseña </label>
+
+        </div>
+
+        <button type="submit" class="fadeIn fourth" value="Log In" (click)="comprobarUser(userForm)"> Iniciar Sesión </button>
+
+        </div>
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+      <a class="underlineHover" routerLink="/sign"><strong>Registrarse </strong></a>
+    </div>
+
+  </div>
+</div>
+
+</html>

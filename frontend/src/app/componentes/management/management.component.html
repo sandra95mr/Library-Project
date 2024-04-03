@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <aside class="izqui">
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body p-4">
+    
+            <form action="" method="POST" id="form" #productForm="ngForm">
+            <!-- forma para decirle a angular que voy a seleccionar todo el contenido para guardarlo en una especie de variable # -->
+              <!-- cuando enviemos el formulario vamos a querer manejarlo con esa funcion que le pasamos, que va a recibir como paramentro todo el formulario-->
+             
+              <h2> REGISTRAR LIBRO: </h2>
+    
+              <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="apiService.selectedProduct._id">
+    
+              <div class="form-group" style="padding-top: 5px;">
+                <div class="input-field col-s12">
+                <input type="text" name="titulo" #ti (change)="ruta()"
+                  placeholder="Introduzca el título" class="form-control" #name="ngModel" [(ngModel)]="apiService.selectedProduct.titulo" id="titulo" required>
+              </div>
+              </div>
+    
+              <div class="form-group">
+                <div class="input-field col-s12">
+                  <input type="number" name="paginas" class="form-control" #name="ngModel" [(ngModel)]="apiService.selectedProduct.paginas" id="paginas" onmouseover="this.placeholder='Introduzca el número de páginas'" required>
+                </div>
+              </div>
+    
+              <div class="form-group">
+                <div class="input-field col-s12">
+                <input type="text" name="genero"
+                  placeholder="Introduzca el género" class="form-control" #name="ngModel" [(ngModel)]="apiService.selectedProduct.genero" id="genero" required>
+              </div>
+              </div>
+    
+              <div class="form-group">
+                <div class="input-field col-s12">
+                  <input type="text" name="descripcion" placeholder="Introduzca la descripción" class="form-control" #name="ngModel" [(ngModel)]="apiService.selectedProduct.descripcion" id="descripcion" required>
+                </div>
+              </div>
+    
+              <div class="form-group">
+                <div class="input-field col-s12">
+                <input type="number" name="precio" class="form-control" #name="ngModel" [(ngModel)]="apiService.selectedProduct.precio" id="precio" placeholder="Introduzca el precio" required>
+              </div>
+              </div>
+    
+              <div class="form-group">
+                <div class="input-field col-s12">
+                  <input type="number" name="stock"
+                     min="0" placeholder="Introduzca el stock" value="" class="form-control" #name="ngModel" [(ngModel)]="apiService.selectedProduct.stock" id="stock" required>
+                </div>
+              </div>
+    
+              <div class="form-group">
+                <div class="input-field col-s12">
+                  <input type="text" name="ruta" #ru id="ruta" style="pointer-events: none;"
+                    placeholder="Introduzca la ruta de la portada" class="form-control" #name="ngModel" [(ngModel)]="apiService.selectedProduct.ruta" required>
+                </div>
+              </div>
+    
+    
+              <button type="submit" class="btn left btn-sm" (click)="addProduct(productForm)"> <!-- va a ejecutar el evento submit del formulario, en realidad no hace falta ponerle el type porque ya lo ejecuto cuando pulsa boton-->
+    
+                <i class="material-icons"> save </i> <!-- send, check, save -->
+    
+            </button>
+    
+            <button type="submit" class="btn left btn-sm" (click)="vaciar(productForm)"> <!-- va a ejecutar el evento submit del formulario, en realidad no hace falta ponerle el type porque ya lo ejecuto cuando pulsa boton-->
+    
+              <i class="material-icons"> clear </i> <!-- send, check, save -->
+    
+          </button>
+              
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    
+    </aside>
+
+    <aside class="derec">
+
+    <div class="col-md-8">
+        <table class="table table-striped">
+          <thead>
+            <th class="hidden-cell">ID</th>
+            <th>TÍTULO</th>
+            <th>PÁGINAS</th>
+            <th>GÉNERO</th>
+            <th>DESCRIPCIÓN</th>
+            <th>PRECIO</th>
+            <th>STOCK</th>
+            <th>PORTADA</th>
+            <th>ACCIONES</th>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of apiService.products">
+              <td class="hidden-cell">{{product._id}}</td>
+              <td>{{product.titulo}}</td>
+              <td>{{product.paginas}}</td>
+              <td>{{product.genero}}</td>
+              <td>{{product.descripcion}}</td>
+              <td>{{product.precio}}</td>
+              <td>{{product.stock}}</td>
+              <td><img style="width:100px;" src="{{product.ruta}}" alt=""></td>
+              <td>
+      
+      
+              <button class="btn btn-secondary btn-sm" (click)="editProduct(product)"><!-- propiedad btn-sm para hacer más pequeños los botones en materialize -->
+                <i class="material-icons"> edit </i>
+              </button>
+              <button class="btn btn-danger btn-sm" (click)="deleteProduct(product._id)"> 
+                  <i class="material-icons"> delete </i>
+              </button>
+      
+              <!-- cuando haga click a la funcion le vamos a pasar el id del empleado, que lo capturaremos
+                              voy a pasarte, desde el empleado actual que se está recorriendo con el ng for le pasamos el id-->
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </aside>
+</body>
+
+</html>

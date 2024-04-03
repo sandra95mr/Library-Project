@@ -1,0 +1,45 @@
+
+body{
+
+  height: 40px ;
+  
+}
+
+.navbar {
+
+    background-color: rgb(62, 17, 99);
+    width: 100%;
+    border-top: none;
+    padding-left: 400px;
+    box-shadow: none;
+    -webkit-border-radius: 0;  /* esta y las otras dos quitan los border radius al menu*/
+    -moz-border-radius: 0;
+    border-radius: 0;  
+    
+}
+
+
+.nav li a {
+    background-color: rgb(62, 17, 99);
+    color:white;
+    text-decoration:none;
+    padding:10px 40px;
+    display:block;
+    font-size: 1em;
+ 
+    
+  }
+
+.nav li a:hover {
+
+    background-color: rgb(175, 33, 168);
+    font-size: 1.1em;
+   
+    }
+
+
+a:hover {
+  
+    cursor: pointer;
+  }
+

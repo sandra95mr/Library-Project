@@ -1,0 +1,54 @@
+div{
+
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+  .card {
+
+    width: 40vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 40vh;
+    min-height: 30vh;
+    word-wrap: break-word;
+    border: 1px solid hsla(246, 100%, 6%, 0.623);
+    border-radius: 10px;
+
+   
+  }
+
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .card-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: hsla(246, 100%, 6%, 0.623);
+  }
+  
+  .card-subtitle {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: hsla(246, 100%, 6%, 0.623);
+  }
+  
+  
+  .product-details {
+
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: hsla(246, 100%, 6%, 0.623);
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid hsla(246, 100%, 6%, 0.623);
+  }
+
+  

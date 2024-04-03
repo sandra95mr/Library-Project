@@ -1,0 +1,92 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+<ng-container *ngIf="products.length!=0"> <!-- Si array de productos tiene algo me muestras la tabla, si no, carrito vacio-->
+
+    <div class="container">
+
+    <div class="card-table">
+
+        <div class="card-product">
+
+            <table class="table table-responsive">
+
+                <thead>
+
+                    <tr>
+
+                        <th>Número:</th>
+                        <th>Título:</th>
+                        <th>Portada:</th>
+                        <th>Descripción:</th>
+                        <th>Precio:</th>
+                        <th>Cantidad:</th>
+                        <th>Total:</th>
+                        <th>Acción:</th>
+
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr *ngFor="let libro of products; let i= index">
+
+                        <td class="par">{{i+1}}</td>
+                        <td class="par">{{libro.producto.titulo}}</td>
+                        <td><img style="width:120px;" src="{{libro.producto.ruta}}" alt=""></td>
+                        <td class="par">{{libro.producto.descripcion}}</td>
+                        <td class="par">{{libro.producto.precio}} €</td>
+                        <td class="par">{{libro.cantidad}}</td>  <!-- Revisar lo de la cantidad y el total-->
+                        <td class="par">{{libro.precioTo}} €</td>
+                        <td>
+
+                        <span (click)="removeProduct(libro)" class="glyphicon glyphicon-trash" style="color: red; font-size: 2em; padding-top: 0%; margin-top: 0px;"></span>
+
+                        </td>
+                      
+                    </tr>
+
+                    <tr>
+                        <td colspan="4"> </td>
+                        <td><button class="btn btn-danger" (click)="removeAllProducts()">Vaciar</button></td>
+                        <td><button class="btn btn-primary" routerLink="/products/All">Seguir Comprando</button></td>
+                        <td><button class="btn btn-success" (click)="addTransaction()">Tramitar Pedido</button></td>
+                        <td style="font-size: larger; margin-top: 70px; padding-top: 1.2%;"><strong>TOTAL: {{totalPrice}}€ </strong></td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+    </div>
+
+</ng-container>
+
+
+<ng-container *ngIf="products.length==0">
+
+<div class="container">
+
+    <div class="card">
+
+        <h3 class="card-title"> Mi Cesta </h3>
+
+    </div>
+
+    <div class="center">
+
+        <img src="../../../assets/imagenes/Cesta.png" alt="">
+        <h4>La cesta está vacía</h4>
+        <h5>Añada el primer producto</h5>
+        <button routerLink="/products/All" class="btn btn-primary"> Comprar ahora </button>
+
+    </div>
+
+
+</div>
+
+</ng-container>

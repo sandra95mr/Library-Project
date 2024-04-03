@@ -1,0 +1,170 @@
+.imagenes {
+    display: block;
+    background-color: rgb(62, 17, 99);
+    margin-top: 0;
+    width: 100%;
+    height: 130px;
+    border-bottom: none;
+    
+   
+
+}
+
+.logo {
+    display: inline-block;
+    margin-left: 150px;
+    padding-right: 10%;
+    margin-top: 1%;
+    
+
+}
+
+.logo img {
+
+  /* position: absolute;*/
+    width: 140px;
+    height: 95px;
+   
+}
+
+/* Lo primero es posicionar el formulario para asegurarnos que el efecto se produce de derecha a izquierda */
+.navbar-form {
+    position:absolute;
+    right:680px;
+    top:4px;
+    vertical-align: bottom;
+    padding-top: 15px;
+    
+}
+
+.input-group-btn2 {
+
+    position:absolute;
+    right:30px;
+    top: 15px;
+    color: white;
+    
+
+}
+
+.material-icons{
+
+    color: white;
+   
+}
+
+.boton2{
+
+    display: block;
+    width: 55px;
+    height: 55px;
+    background-color:  rgb(175, 33, 168);
+    border-style: solid;
+    border-color: white;
+    border-radius: 50%;
+
+}
+
+input{
+    color: white;
+}
+
+.form-control::placeholder{  /* dar color al pseudoelemento*/
+   
+    color:white;
+}
+
+
+/* Para pantallas grandes hacemos que el formulario se despliegue con amplitud ya que disponemos de espacio en la barra de navegación, la busqueda se ejecuta con intro o pinchando en el icono de la lupa */
+@media (min-width:1200px) {
+    .navbar-form input.form-control[type=text] { width: 160px; }
+    .navbar-form input.form-control[type=text]:focus { width: 300px; }
+    
+}
+
+.btn{
+
+    background-color: rgb(175, 33, 168);
+    border-color: rgb(175, 33, 168);
+}
+
+
+/* Definimos las transiciones */
+.navbar-form .form-control[type=text] {
+    background: transparent;
+    display:inline-block;
+    transition: all .5s;
+
+}
+/* Al situar el puntero en el campo de búsqueda este cambia su color de fondo a blanco, el color de la letra, el borde y la sombra */
+.navbar-form .form-control[type=text]:focus {
+    background-color: #fff;
+    border-color: #729fcf;
+    margin-top: 8px;
+    -webkit-box-shadow: 0 0 5px rgba(109,207,246,.5);
+    -moz-box-shadow: 0 0 5px rgba(109,207,246,.5);
+    box-shadow: 0 0 5px rgba(109,207,246,.5);
+    color: black;
+}
+
+.icon:hover{
+
+    transform:scale(1.3);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.5),0 10px 30px 0 rgba(0,0,0,0.5);
+  }
+  
+.boton2:hover{
+
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,0.5),0 17px 50px 0 rgba(0,0,0,0.5);
+      }
+
+
+      .navbar {
+        background-color: rgb(62, 17, 99);
+        width: 100%;
+        border-top: none;
+        padding-left: 400px;
+        box-shadow: none;
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+        
+      }
+      
+      .navbar-nav.navbar-right li {
+        display: inline-block;
+        margin: 0;
+        padding: 5px;
+      }
+      
+      .navbar-nav.navbar-right li a {
+        background-color: rgb(62, 17, 99);
+        color: white;
+        text-decoration: none;
+        padding: 5px 20px;
+        display: block;
+        font-size: 1em;
+      }
+      
+      .navbar-nav.navbar-right li a:hover {
+        
+        font-size: 1.1em;
+      }
+      
+      a:hover {
+        cursor: pointer;
+      }
+      
+      .navbar-nav.navbar-right {
+        margin-right: 100px;
+        margin-top: 20px;
+        float: left;
+      }
+
+      .navbar-nav.navbar-right li {
+        display: inline-block;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: 2px;
+      }
+

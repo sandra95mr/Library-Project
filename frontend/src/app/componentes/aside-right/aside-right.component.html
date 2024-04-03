@@ -1,0 +1,16 @@
+<aside class="derecha">
+
+  <div #us style="margin-bottom: 30px;">
+ 
+    <img src='../../../../assets/imagenes/camara.png' alt="Descripción de la imagen" style="float: right; width: 30px; height: 30px; margin-left: 25px; margin-right: 30px; cursor: pointer;" (click)="showFotoComponent()">
+    <p #bienvenida style="margin-top: 5px; margin-left: 10px;"><strong></strong></p>
+
+  </div>
+
+<app-component-cart></app-component-cart>
+
+<button class="btn btn-primary" #boton (click)="mostrarCompras()" style="visibility: hidden;">Ver Mis Compras</button>
+
+<app-mis-compras *ngIf="mostrar==true"></app-mis-compras>
+
+  </aside>
