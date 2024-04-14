@@ -2,6 +2,8 @@
 
 Project Developed in Class with Angular, NodeJS, Express, MongoDB (REST API)
 
+https://i.postimg.cc/DfYnSmLM/3.png
+
 # Description 📘
 
 This project is a web application developed as part of an academic assignment for a class. It's an online bookstore platform built using the MEAN stack (MongoDB, Express, Angular, Node.js) and TypeScript. It also serves as a REST API.
