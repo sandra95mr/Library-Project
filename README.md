@@ -10,7 +10,7 @@ This project is a web application developed as part of an academic assignment fo
 
 **Sandra Marcos Recio**
 
-* [LinkedIn](www.linkedin.com/in/sandra-marcos-recio-083a152b9)*
+* [LinkedIn](www.linkedin.com/in/sandra-marcos-recio-083a152b9)
 
 # Features ✏️🛒🔍📷
 
