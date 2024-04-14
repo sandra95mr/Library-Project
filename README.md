@@ -1,6 +1,6 @@
 #  Library-Project 
 
-Project Developed in Class with Angular, NodeJS, Express, MongoDB (REST API)
+Project Developed in Class with Angular, NodeJS, Express, MongoDB (REST API).
 
 <img src="https://i.postimg.cc/DfYnSmLM/3.png">
 
@@ -8,7 +8,7 @@ Project Developed in Class with Angular, NodeJS, Express, MongoDB (REST API)
 
 This project is a web application developed as part of an academic assignment for a class. It's an online bookstore platform built using the MEAN stack (MongoDB, Express, Angular, Node.js) and TypeScript. It also serves as a REST API.
 
-# Autor 👩🏻‍💻
+# Author 👩🏻‍💻
 
 **Sandra Marcos Recio**
 
