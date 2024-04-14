@@ -2,7 +2,7 @@
 
 Project Developed in Class with Angular, NodeJS, Express, MongoDB (REST API)
 
-https://i.postimg.cc/DfYnSmLM/3.png
+<img src="https://i.postimg.cc/DfYnSmLM/3.png">
 
 # Description 📘
 
