@@ -10,9 +10,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "balanced-match": "^3.0.1",
     "cors": "2.8.5",
     "express": "4.18.2",
-    "moongose": "1.0.0",
+    "mongoose": "1.0.0",
     "morgan": "1.10.0"
   },
   "devDependencies": {
